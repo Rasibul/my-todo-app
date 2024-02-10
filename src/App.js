@@ -18,8 +18,8 @@ const App = () => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-  const addTask = (text) => {
-    const newTask = { id: Date.now(), text, completed: false };
+  const addTask = ({ text, priority }) => {
+    const newTask = { id: Date.now(), text, priority, completed: false };
     setTasks((prevTasks) => [...prevTasks, newTask]);
   };
 

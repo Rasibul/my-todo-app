@@ -1,8 +1,14 @@
 import React from 'react';
 
 const TaskItem = ({ task, onDelete, onToggle }) => {
+  const priorityColors = {
+    low: '#38a169',    // Green for low priority
+    medium: '#ffed4a', // Yellow for medium priority
+    high: '#e53e3e',   // Red for high priority
+  };
+
   return (
-    <li className="task-item">
+    <li className="task-item" style={{ borderColor: priorityColors[task.priority] }}>
       <span className={`task-text ${task.completed ? 'completed' : ''}`}>{task.text}</span>
       <button className="delete-btn" onClick={() => onDelete(task.id)}>
         Delete
