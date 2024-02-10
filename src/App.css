@@ -1,6 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #a30909;
+  background-color: #a8a1c6;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -24,15 +23,15 @@ h1 {
 
 .task-form {
   display: flex;
+  flex-direction: column; /* Stack elements vertically */
   margin-top: 20px;
 }
 
 .task-form input {
-  flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  margin-right: 8px;
+  margin-bottom: 8px; /* Space between input and buttons */
   outline: none;
 }
 
@@ -53,42 +52,46 @@ h1 {
 
 .task-item {
   display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 40px;
+  padding: 20px; /* Reduced padding for better mobile experience */
   margin-bottom: 10px;
 }
 
 .task-text {
-  flex: 1;
   font-size: 16px;
   color: #333;
+  margin-bottom: 8px; /* Space between text and buttons */
 }
 
 .completed {
   text-decoration: line-through;
   color: #888;
- 
 }
 
-.delete-btn {
-  background-color: #dc3545;
-  color: #fff;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 8px;
-}
-
+.delete-btn,
 .toggle-btn {
-  background-color: #28a745;
+  background-color: #007bff;
   color: #fff;
   padding: 8px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 8px; /* Space between buttons */
+}
+
+/* Larger devices */
+@media (min-width: 768px) {
+  .task-form {
+    flex-direction: row; /* Arrange elements side by side on larger screens */
+    align-items: center;
+  }
+
+  .task-form input {
+    margin-right: 8px; /* Add gap between input and buttons */
+  }
 }
