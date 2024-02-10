@@ -12,17 +12,15 @@ const TaskForm = ({ onAdd }) => {
   };
 
   return (
-    <form className="mt-4" onSubmit={handleSubmit}>
+    <form className="task-form mt-4" onSubmit={handleSubmit}>
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="p-2 border-2 border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+        placeholder="Add a new task"
+        className="task-input"
       />
-      <button
-        type="submit"
-        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md ml-2"
-      >
+      <button type="submit" className="add-btn">
         Add Task
       </button>
     </form>
