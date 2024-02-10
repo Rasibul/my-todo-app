@@ -23,7 +23,7 @@ This is a simple Todo List application built with React.js. The app allows users
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/react-todo-list-app.git
+   git clone https://github.com/Rasibul/my-todo-app.git
 2.Navigate to the project directory
 cd my-todo-app
 
